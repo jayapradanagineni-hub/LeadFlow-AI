@@ -1,0 +1,86 @@
+TEST COMMAND: python -m unittest -v test_leadflow.py
+RETURN CODE: 0
+
+STDOUT:
+[COLD] Asha | score=15/100 | service=Customer Support Chatbot
+  Follow-up: Hi Asha, thanks for sharing your requirement. We can discuss how customer support chatbot could help. Would you be available for a short call this week?
+[DUPLICATE] Asha Duplicate matches existing lead ID 1; no new record or alert.
+[COLD] Asha | score=15/100 | service=Customer Support Chatbot
+  Follow-up: Hi Asha, thanks for sharing your requirement. We can discuss how customer support chatbot could help. Would you be available for a short call this week?
+[DUPLICATE] Asha New matches existing lead ID 1; no new record or alert.
+[HOT] Ananya Rao | score=85/100 | service=Workflow Automation
+  Follow-up: Hi Ananya, thanks for sharing your requirement. We can discuss how workflow automation could help. Would you be available for a short call this week?
+[ALERT] HOT LEAD: Ananya Rao (score 85/100; lead ID 1)
+[COLD] Asha | score=10/100 | service=Customer Support Chatbot
+  Follow-up: Hi Asha, thanks for sharing your requirement. We can discuss how customer support chatbot could help. Would you be available for a short call this week?
+[REJECTED] (no name): name is required; requirement is required; provide at least one valid email or phone
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+test_cold_lead (test_leadflow.LeadFlowTests.test_cold_lead) ... ok
+test_duplicate_by_email (test_leadflow.LeadFlowTests.test_duplicate_by_email) ... ok
+test_duplicate_by_phone_and_company (test_leadflow.LeadFlowTests.test_duplicate_by_phone_and_company) ... ok
+test_fallback_has_required_fields (test_leadflow.LeadFlowTests.test_fallback_has_required_fields) ... ok
+test_hot_lead_creates_one_alert (test_leadflow.LeadFlowTests.test_hot_lead_creates_one_alert) ... ok
+test_inspectable_event_history (test_leadflow.LeadFlowTests.test_inspectable_event_history) ... ok
+test_invalid_lead_is_stored_as_rejected (test_leadflow.LeadFlowTests.test_invalid_lead_is_stored_as_rejected) ... ok
+test_reject_invalid_contact (test_leadflow.LeadFlowTests.test_reject_invalid_contact) ... ok
+test_reject_missing_name (test_leadflow.LeadFlowTests.test_reject_missing_name) ... ok
+test_reject_missing_requirement (test_leadflow.LeadFlowTests.test_reject_missing_requirement) ... ok
+test_score_and_hot_threshold (test_leadflow.LeadFlowTests.test_score_and_hot_threshold) ... ok
+test_valid_email_lead (test_leadflow.LeadFlowTests.test_valid_email_lead) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.088s
+
+OK
+
+
+SAMPLE COMMAND: python leadflow.py process sample_leads.json
+RETURN CODE: 0
+
+STDOUT:
+Processing 7 input lead(s) from sample_leads.json...
+[HOT] Ananya Rao | score=85/100 | service=AI Lead Qualification & Follow-up Automation
+  Follow-up: Hi Ananya, thanks for sharing your requirement. We can discuss how ai lead qualification & follow-up automation could help. Would you be available for a short call this week?
+[ALERT] HOT LEAD: Ananya Rao (score 85/100; lead ID 1)
+[DUPLICATE] Ananya Rao matches existing lead ID 1; no new record or alert.
+[WARM] Ravi Kumar | score=65/100 | service=Customer Support Chatbot
+  Follow-up: Hi Ravi, thanks for sharing your requirement. We can discuss how customer support chatbot could help. Would you be available for a short call this week?
+[WARM] Meera Shah | score=50/100 | service=Data Analytics Dashboard
+  Follow-up: Hi Meera, thanks for sharing your requirement. We can discuss how data analytics dashboard could help. Would you be available for a short call this week?
+[COLD] Kiran | score=10/100 | service=AI Lead Qualification & Follow-up Automation
+  Follow-up: Hi Kiran, thanks for sharing your requirement. We can discuss how ai lead qualification & follow-up automation could help. Would you be available for a short call this week?
+[REJECTED] (no name): name is required; requirement is required; provide at least one valid email or phone
+[WARM] Sanjay Patel | score=65/100 | service=Workflow Automation
+  Follow-up: Hi Sanjay, thanks for sharing your requirement. We can discuss how workflow automation could help. Would you be available for a short call this week?
+
+SUMMARY
+Input leads: 7
+Qualified/new records: 5
+Rejected: 1
+Duplicates ignored: 1
+Database: /mnt/data/LeadFlow_Project/demo_run.db
+Outbox: /mnt/data/LeadFlow_Project/demo_outbox.jsonl
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
+

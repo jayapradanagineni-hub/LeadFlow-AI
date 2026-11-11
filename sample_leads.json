@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Ananya Rao",
+    "email": "ananya@example.com",
+    "phone": "+91 98765 43210",
+    "company": "Aster Health",
+    "requirement": "Need to implement AI lead qualification urgently",
+    "budget_inr": 100000,
+    "industry": "healthcare",
+    "source": "referral"
+  },
+  {
+    "name": "Ananya Rao",
+    "email": " ANANYA@example.com ",
+    "phone": "+91 98765 43210",
+    "company": "Aster Health",
+    "requirement": "Need to implement AI lead qualification urgently",
+    "budget_inr": 100000,
+    "industry": "healthcare",
+    "source": "referral"
+  },
+  {
+    "name": "Ravi Kumar",
+    "email": "ravi.kumar@example.com",
+    "phone": "+91 91234 56780",
+    "company": "Bright Retail",
+    "requirement": "Looking for a customer support chatbot",
+    "budget_inr": 60000,
+    "industry": "retail",
+    "source": "website demo"
+  },
+  {
+    "name": "Meera Shah",
+    "email": "meera.shah@example.com",
+    "phone": "+91 99887 76655",
+    "company": "EduNext",
+    "requirement": "Need a data analytics dashboard",
+    "budget_inr": 35000,
+    "industry": "education",
+    "source": "website"
+  },
+  {
+    "name": "Kiran",
+    "email": "kiran@example.com",
+    "phone": "",
+    "company": "",
+    "requirement": "Just browsing",
+    "budget_inr": 0,
+    "industry": "other",
+    "source": "unknown"
+  },
+  {
+    "name": "",
+    "email": "bad-email",
+    "phone": "123",
+    "company": "Unknown",
+    "requirement": "",
+    "budget_inr": 0,
+    "industry": "",
+    "source": "web"
+  },
+  {
+    "name": "Sanjay Patel",
+    "email": "",
+    "phone": "+91 90000 11122",
+    "company": "FlowWorks",
+    "requirement": "Interested in workflow automation; please share a quote",
+    "budget_inr": 80000,
+    "industry": "technology",
+    "source": "sales enquiry"
+  }
+]

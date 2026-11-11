@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadFlow AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>LeadFlow AI</h1>
+        <p>AI-Powered Lead Qualification Dashboard</p>
+    </header>
+
+    <main>
+
+        <section class="stats">
+            <div class="card">
+                <h3>Total Leads</h3>
+                <p id="total">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Qualified</h3>
+                <p id="qualified">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Rejected</h3>
+                <p id="rejected">0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add New Lead</h2>
+
+            <form id="leadForm">
+
+                <input id="name" placeholder="Lead Name" required>
+
+                <input id="email" type="email" placeholder="Email">
+
+                <input id="phone" placeholder="Phone Number">
+
+                <input id="company" placeholder="Company">
+
+                <textarea id="requirement"
+                    placeholder="Customer Requirement"
+                    required></textarea>
+
+                <input id="budget"
+                    type="number"
+                    placeholder="Budget in INR"
+                    min="0">
+
+                <input id="industry" placeholder="Industry">
+
+                <select id="source">
+                    <option value="">Select Source</option>
+                    <option>Referral</option>
+                    <option>Website Demo</option>
+                    <option>Sales Enquiry</option>
+                    <option>Social Media</option>
+                </select>
+
+                <button type="submit">Qualify Lead</button>
+
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section>
+            <h2>Lead Records</h2>
+
+            <button onclick="loadLeads()">Refresh Leads</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="leadTable"></tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
